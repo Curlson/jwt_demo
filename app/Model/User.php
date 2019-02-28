@@ -9,6 +9,11 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable implements JWTSubject
 {
     use Notifiable;
+
+    /**
+     * @var array
+     */
+    protected $fillable = ['name', 'mobile', 'password'];
 	
 	public function getJWTIdentifier()
 	{
