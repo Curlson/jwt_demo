@@ -17,7 +17,11 @@ Route::prefix('auth')->group(function($router) {
     $router->post('login', 'AuthController@login');
     $router->post('logout', 'AuthController@logout');
 });
+//middleware('refresh.token')->
 
-Route::middleware('refresh.token')->group(function($router) {
-    $router->get('profile','UserController@profile');
+Route::middleware([])->group(function() {
+    Route::get('profile','UserController@profile');
+    // 导入 excel
+    Route::post('user/import','UserController@import');
+    Route::get('user/export','UserController@export');
 });

@@ -159,8 +159,10 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-	//JWT 添加服务提供商
-	Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+	    //JWT 添加服务提供商
+	    Tymon\JWTAuth\Providers\LaravelServiceProvider::class,
+        //Excel 服务
+        Maatwebsite\Excel\ExcelServiceProvider::class,
 
     ],
 
@@ -210,6 +212,8 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        // Excel 处理
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
 
     ],
 
