@@ -35,7 +35,7 @@ class UserController extends Controller
                 ->withErrors('文件上传失败,请重新上传');
         }
 
-        Excel::import(new UsersImport, request()->file('excel'));
+        //Excel::import(new UsersImport, request()->file('excel'));
 
         try {
             $collection = app(UsersImport::class)->toCollection(request()->file('excel'));

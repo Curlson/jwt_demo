@@ -24,4 +24,7 @@ Route::middleware([])->group(function() {
     // 导入 excel
     Route::post('user/import','UserController@import');
     Route::get('user/export','UserController@export');
+    Route::get('test', function(){
+        return 'hello wrold';
+    });
 });
